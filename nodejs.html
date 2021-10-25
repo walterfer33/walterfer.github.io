@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/jquery-2.1.0.min.js"></script>
+	<script src="js/scripts.js"></script>
+    <title>Tutorial amazon AWS</title>
+  </head>
+  <body>
+	<header class="header-movil">
+		<h1 id="encabezado">Tutorial de configuracion y uso de Amazon Web Services</h1>
+	</header>
+	<nav id="menu" class="nav-menu">
+		<li>&nbsp;<a href="index.html">Inicio</a></li>
+		<li>&nbsp;<a href="instancia.html">Instalación de la instancia</a></li>
+		<li>&nbsp;<a href="nodejs.html">Instalación de node.js</a></li>
+		<li>&nbsp;<a href="github.html">Instalacion de github</a></li>
+		<li>&nbsp;<a href="codigo.html">Instalacion de codigo fuente del proyecto</a></li>
+		<li>&nbsp;<a href="configuracion.html">Configuracion e inicio de servicios</a></li>
+	</nav>
+</div>
+<article id="article4">
+	<p>Instalación de node.js</p>
+		<p id="justificado">Comando para actualizar la terminal</p>
+		<pre class="pre1"><code class="adapt">
+		sudo yum update
+		</pre></code>
+		<p id="justificado">Instale el administrador de versiones de nodo (nvm) escribiendo lo siguiente en la línea de comando.</p>
+		<pre class="pre1"><code class="adapt">
+		curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+		</pre></code>
+
+				<p id="justificado">Usaremos nvm para instalar Node.js porque nvm puede instalar múltiples versiones de Node.js y permitirle cambiar entre ellas. Active nvm escribiendo lo siguiente en la línea de comando.</p>
+		<pre class="pre1"><code class="adapt">
+		. ~/.nvm/nvm.sh
+		</pre></code>
+
+				<p id="justificado">Use nvm para instalar la última versión de Node.js escribiendo lo siguiente en la línea de comando.</p>
+		<pre class="pre1"><code class="adapt">
+		nvm install node
+		</pre></code>
+
+
+				<p id="justificado">Pruebe que Node.js esté instalado y funcionando correctamente escribiendo lo siguiente en la línea de comando.</p>
+		<pre class="pre1"><code class="adapt">
+		node -e "console.log('Running Node.js ' + process.version)"
+		</pre></code>
+
+
+				<p id="justificado">Comando para agregar el repositorio de node.js</p>
+		<pre class="pre1"><code class="adapt">
+		curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+		</pre></code>
+</article>
+    <footer>
+        <span class="text-light">
+<center>
+<small>
+Desarrollado por: Walter Rodriguez (T31751087) email:
+<a href="mailto:www.walferm@gmail.com">www.walferm@gmail.com</a>
+</small>
+</center>
+</span>
+</footer>
+  </body>
+</html>

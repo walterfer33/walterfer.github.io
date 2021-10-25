@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/jquery-2.1.0.min.js"></script>
+	<script src="js/scripts.js"></script>
+    <title>Tutorial amazon AWS</title>
+  </head>
+  <body>
+	<header class="header-movil">
+		<h1 id="encabezado">Tutorial de configuracion y uso de Amazon Web Services</h1>
+	</header>
+	<nav id="menu" class="nav-menu">
+		<li>&nbsp;<a href="index.html">Inicio</a></li>
+		<li>&nbsp;<a href="instancia.html">Instalación de la instancia</a></li>
+		<li>&nbsp;<a href="nodejs.html">Instalación de node.js</a></li>
+		<li>&nbsp;<a href="github.html">Instalacion de github</a></li>
+		<li>&nbsp;<a href="codigo.html">Instalacion de codigo fuente del proyecto</a></li>
+		<li>&nbsp;<a href="configuracion.html">Configuracion e inicio de servicios</a></li>
+	</nav>
+</div>
+<article>
+	<p>Creacion y configuración de la instancia en Amazon</p>
+	<p id="justificado">Es necesario contar con una suscripcion a AWS previamente para poder crear una instancia o servidor virtual en Amazon. Lo primero que debemos saber es que Una imagen de máquina de Amazon ( AMI ) es un tipo especial de dispositivo virtual que se utiliza para crear una máquina virtual dentro de Amazon Elastic Compute Cloud ("EC2"), la cual sirve como la unidad básica de implementación para los servicios prestados mediante EC2.</p>
+	<p id="justificado">Para poder comenzar a crear nuestra propia instancia, primero debemos iniciar sesion previamente en la pagina de AWS (el link se encuentra en la pagina de inicio de esta Web).</p>
+	<p id="center"><img id="instancia" src="img/aws1.jpg"></p>
+	<p id="justificado">Luego nos colocamos en la barra de busqueda de la pagina web y digitamos la palabra "EC2"</p>
+	<p id="center"><img id="instancia" src="img/aws2.jpg"></p>
+	<p id="justificado">Al hacer clic sobre esa popción, nos llevará a una nueva pantalla, donde haremos clic en la opcion "Instances":</p>
+	<p id="center"><img id="instancia" src="img/aws3.jpg"></p>
+	<p id="justificado">Hacemos clic en el boton "Launch Instances":</p>
+	<p id="center"><img id="instancia" src="img/aws4.jpg"></p>
+	<p id="justificado">Hacemos clic en el boton "select" en la opcion llamada "Amazon Linux AMI (HVM),SSD Volume Type", en una version 64-bit(x86):</p>
+	<p id="center"><img id="instancia" src="img/aws5.jpg"></p>
+	<p id="justificado">Hacemos clic en el boton "Next: Configure instance Details":</p>
+	<p id="center"><img id="instancia" src="img/aws6.jpg"></p>
+	<p id="justificado">Nos aseguraremos de que la region seleccionada en el paso 1 de la imagen sea "N. Virginia" y que la opcion "Subnet" sea siempre: "subnet-2578b643 | Default in us-east-1a" como en el paso 2 y hacemos clic en el boton "Next: Add Storge":</p>
+	<p id="center"><img id="instancia" src="img/aws7.jpg"></p>
+	<p id="justificado">Hacemos clic en el boton "Next: Add Tags":</p>
+	<p id="center"><img id="instancia" src="img/aws8.jpg"></p>
+	<p id="justificado">Hacemos clic en el boton "Next: Add Tags" del paso 1 y luego Escribimos en el campo key la palabra "Name" y en el campo value el nombre del alumno que está creando la instancia, luego hacemos clic en el boton "Next: Configure Security Group", como se vé en el paso 3:</p>
+	<p id="center"><img id="instancia" src="img/aws9.jpg"></p>
+	<p id="justificado">Si previamente ya habiamos creado una instancia con nuestro nombre como en la imagen anterior, solamente damos clic en "Select an existing segurity group" y elegimos la instancia que contenga nuestro nombre, de lo contrario, hacemos clic en "Create a new seguruty group" y luego hacemos clic en el boton "Review and Launch":</p>
+	<p id="center"><img id="instancia" src="img/aws10.jpg"></p>
+	<p id="justificado">En la siguiente pantalla hacemos clic en el boton " Launch":</p>
+	<p id="center"><img id="instancia" src="img/aws11.jpg"></p>
+	<p id="justificado">Hacemos clic en el checkbox como se ve en el paso 1 y ñuego presionamos el boton "Launch Instances":</p>
+	<p id="center"><img id="instancia" src="img/aws12.jpg"></p>
+	<p id="justificado">Hacemos clic en el boton "View Instances":</p>
+	<p id="center"><img id="instancia" src="img/aws13.jpg"></p>
+	<p id="justificado">Hacemos clic en el checkbox que se encuentra a la par del nombre de la instancia como se vé en el paso 1, luego hacemos clic en "Actions" y seleccionamos la opcion  boton "View Instances":</p>
+	<p id="center"><img id="instancia" src="img/aws14.jpg"></p>
+	<p id="justificado">Hacemos clic en el boton "Connect"</p>
+	<p id="center"><img id="instancia" src="img/aws15.jpg"></p>
+	<p id="justificado">Se mostrará una pantalla como la siguiente, donde retornaremos a la pestaña que se encuentra al lado izquiedo:</p>
+	<p id="center"><img id="instancia" src="img/aws16.jpg"></p>
+	<p id="justificado">Haremos clic en la opcion "Instances":</p>
+	<p id="center"><img id="instancia" src="img/aws17.jpg"></p>
+	<p id="justificado">Y retornaremos al menu de selección de la instancia, donde haremos clic en la pestaña "Security":</p>
+	<p id="center"><img id="instancia" src="img/aws18.jpg"></p>
+	<p id="justificado">Seleccionaremos la opcion 	sg-0a79be1382afb17e1 (launch-wizard-2-NombreAlumno):</p>
+	<p id="center"><img id="instancia" src="img/aws19.jpg"></p>
+	<p id="justificado">Haremos clic en el boton "Edit inbound rules":</p>
+	<p id="center"><img id="instancia" src="img/aws20.jpg"></p>
+	<p id="justificado">Seleccionamos la opcion My Ip en la regla Custom TCP (paso 1), luego agregamos una nueva regla (Boton "Add rule"), por ultimo en la nueva regla colocamos 5000 en el campo "Port Range" luego seleccionamos "Anywhere-Ipv4" en el campo de selección y final mente hacemos clic en el boton "Save rules", ahora ya tendremos totalmente configurada nuestro servidor virtual, podemos pasar a instalar node.js:</p>
+	<p id="center"><img id="instancia" src="img/aws20.jpg"></p>
+
+</article>
+    <footer>
+        <span class="text-light">
+<center>
+<small>
+Desarrollado por: Walter Rodriguez (T31751087) email:
+<a href="mailto:www.walferm@gmail.com">www.walferm@gmail.com</a>
+</small>
+</center>
+</span>
+</footer>
+  </body>
+</html>

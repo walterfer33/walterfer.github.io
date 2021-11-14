@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/jquery-2.1.0.min.js"></script>
+	<script src="js/scripts.js"></script>
+    <title>Tutorial amazon AWS</title>
+  </head>
+  <body>
+	<header class="header-movil">
+		<h1 id="encabezado">Tutorial de configuracion y uso de Amazon Web Services</h1>
+	</header>
+	<nav id="menu" class="nav-menu">
+		<li>&nbsp;<a href="index.html">Inicio</a></li>
+		<li>&nbsp;<a href="instancia.html">Instalación de la instancia</a></li>
+		<li>&nbsp;<a href="nodejs.html">Instalación de node.js</a></li>
+		<li>&nbsp;<a href="github.html">Instalacion de github</a></li>
+		<li>&nbsp;<a href="codigo.html">Instalacion de codigo fuente del proyecto</a></li>
+		<li>&nbsp;<a href="configuracion.html">Configuracion e inicio de servicios</a></li>
+	</nav>
+</div>
+<article id="article">
+	<p>Video y script para correr el codigo fuente</p>
+		<p id="justificado">Script de configuracion</p>
+		<pre class="pre2"><code>
+			#!/bin/bash
+			sudo yum update -y
+			sudo yum install git -y
+			curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+			#https://stackoverflow.com/questions/54415841/nodejs-not-installed-successfully-in-aws-ec2-inside-user-data
+			export NVM_DIR="$HOME/.nvm"
+			[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+			nvm install 7
+			nvm install node -y
+			node -e "console.log('Running Node.js ' + process.version)"
+			#mkdir /tmp/proyecto #Comando para crear carpetas
+			cd
+			git clone https://github.com/walterfer33/waiting-list.git
+			cd /waiting-list
+			pwd
+			npm install
+			npm install -g pm2
+			pm2 start index.js
+			
+			sudo amazon-linux-extras list | grep nginx
+			sudo amazon-linux-extras enable nginx1
+			sudo yum clean metadata
+			sudo yum -y install nginx
+			nginx -v
+			cd /etc/nginx
+			sudo aws s3 cp s3://nginx-ceutec-infra/nginx.conf nginx.conf
+			sudo service nginx restart
+		</pre></code>
+
+		<p id="justificado">Video Grupo de escalamiento</p>
+
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/uPH5mRp4y7s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</article>
+    <footer>
+        <span class="text-light">
+<center>
+<small>
+Desarrollado por: Walter Rodriguez (T31751087) email:
+<a href="mailto:www.walferm@gmail.com">www.walferm@gmail.com</a>
+</small>
+</center>
+</span>
+</footer>
+  </body>
+</html>

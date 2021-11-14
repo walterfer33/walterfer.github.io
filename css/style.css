@@ -213,12 +213,38 @@ article
 
 }
 
+
+#article7
+{
+	background-color:#FCFBF0;
+	font-family: 'Arial Black';
+	font-size: 14px;
+	color:  #581845;
+	height:70%;
+	text-align: center;
+	width: 90%;
+	height: 150em;
+ 	margin: 0 auto;
+    line-height: 30px;
+
+}
+
 .pre1
 {
 	overflow:auto;
 	border-style: groove;
 	margin: 0 auto;
 	width: 45%;
+}
+
+
+.pre2
+{
+	overflow:auto;
+	border-style: groove;
+	margin: 0 auto;
+	width: 70%;
+	text-align: left;
 }
 
 .adapt

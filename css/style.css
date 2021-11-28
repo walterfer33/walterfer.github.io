@@ -229,6 +229,22 @@ article
 
 }
 
+
+#article8
+{
+	background-color:#FCFBF0;
+	font-family: 'Arial Black';
+	font-size: 14px;
+	color:  #581845;
+	height:70%;
+	text-align: left;
+	width: 90%;
+	height: 2000em;
+ 	margin: 0 auto;
+    line-height: 30px;
+
+}
+
 .pre1
 {
 	overflow:auto;

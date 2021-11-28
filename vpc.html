@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/jquery-2.1.0.min.js"></script>
+	<script src="js/scripts.js"></script>
+    <title>Tutorial amazon AWS</title>
+  </head>
+  <body>
+	<header class="header-movil">
+		<h1 id="encabezado">Tutorial de configuracion y uso de Amazon Web Services</h1>
+	</header>
+	<nav id="menu" class="nav-menu">
+		<li>&nbsp;<a href="index.html">Inicio</a></li>
+		<li>&nbsp;<a href="instancia.html">Instalación de la instancia</a></li>
+		<li>&nbsp;<a href="nodejs.html">Instalación de node.js</a></li>
+		<li>&nbsp;<a href="github.html">Instalacion de github</a></li>
+		<li>&nbsp;<a href="codigo.html">Instalacion de codigo fuente del proyecto</a></li>
+		<li>&nbsp;<a href="configuracion.html">Configuracion e inicio de servicios</a></li>
+	</nav>
+</div>
+<article id="article8">
+
+<p>Crear VPC<o:p></o:p></p>
+
+<p>VPC es una red privada, donde se
+puede ejecutar diferentes recursos como: Instancias, bases de datos etc.<o:p></o:p></p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p>Pasos para crear la VPC:<o:p></o:p></p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p>Iniciar <span >sesion</span><o:p></o:p></p>
+
+<p>Ir a VPC <span >Service</span><o:p></o:p></p>
+
+<p><span ><span
+lang=EN-US >Clic</span></span><span lang=EN-US
+> Create VPC<o:p></o:p></span></p>
+
+<p>Name Tag<o:p></o:p></span></p>
+
+<p>IPv4 CIDR block<o:p></o:p></span></p>
+
+<p>IPv6 CIDR block - Sin IPv6<o:p></o:p></span></p>
+
+<p><span >Tenancy</span>
+por default<o:p></o:p></p>
+
+<p>Clic en <span >Create</span>
+VPC</p>
+
+<p><img id="instancia" 
+src="img/image002.jpg" v:shapes="_x0000_i1025">
+<img id="instancia" 
+src="img/image004.jpg" v:shapes="_x0000_i1026">
+<img id="instancia" 
+src="img/image006.jpg" v:shapes="_x0000_i1027">
+<img id="instancia" 
+src="img/image008.jpg" v:shapes="_x0000_i1028">
+<img id="instancia" 
+src="img/image010.jpg" v:shapes="_x0000_i1029"></p>
+
+<p><span >Subnets</span>:
+Publicas y Privadas<o:p></o:p></p>
+
+<p>Las subredes publicas pueden ser
+accedidas mediante una puerta de enlace <span >IGW(</span>Internet <span
+>GateWay</span>).<o:p></o:p></p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p>Las subredes privadas pueden ser <span
+>enrutadas</span> mediante <span >NAT(</span><span
+>network</span> <span >address</span> <span
+>translation</span>).<o:p></o:p></p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p>Pasos para crear subredes:<o:p></o:p></p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p>Seleccionar subred<o:p></o:p></p>
+
+<p>Clic en crear subred<o:p></o:p></p>
+
+<p>ID de VPC: seleccione la VPC que
+crea anteriormente.<o:p></o:p></p>
+
+<p>Configuracian de subred: haga
+clic en Agregar nueva subred tres veces para crear cuatro nuevas formas de
+subred.<o:p></o:p></p>
+
+<p>Subred 1 de 4: ingrese los
+siguientes detalles:<o:p></o:p></p>
+
+<p>Nombre de subred: ingrese
+public-subnet-1<o:p></o:p></p>
+
+<p>Zona de disponibilidad:
+seleccione la primera opcian<o:p></o:p></p>
+
+<p>Ingrese un bloque CIDR para cada
+subred que se ajuste a su bloque CIDR VPC (por ejemplo, 10.0.0.0/24)<o:p></o:p></p>
+
+<p>Subred 2 de 4: ingrese los siguientes
+detalles:<o:p></o:p></p>
+
+<p>Nombre de subred: ingrese
+public-subnet-2<o:p></o:p></p>
+
+<p>Zona de disponibilidad:
+seleccione la segunda <span >opcian .</span> Debe estar en una zona
+de disponibilidad diferente a public-subnet-1.<o:p></o:p></p>
+
+<p>Ingrese un bloque de CIDR para
+cada subred que se ajuste a su bloque de CIDR de VPC (por ejemplo, 10.0.1.0/24)<o:p></o:p></p>
+
+<p>Subred 3 de 4: ingrese los
+siguientes detalles:<o:p></o:p></p>
+
+<p>Nombre de subred: ingrese
+private-subnet-1<o:p></o:p></p>
+
+<p>Zona de disponibilidad:
+seleccione la primera opcian<o:p></o:p></p>
+
+<p>Ingrese un bloque de CIDR para
+cada subred que se ajuste a su bloque de CIDR de VPC (por ejemplo, 10.0.2.0/24)<o:p></o:p></p>
+
+<p>Subred 4 de 4: ingrese los
+siguientes detalles:<o:p></o:p></p>
+
+<p>Nombre de subred: ingrese
+private-subnet-2<o:p></o:p></p>
+
+<p>Zona de disponibilidad:
+seleccione la segunda <span >opcian .</span> Debe estar en una zona
+de disponibilidad diferente a la subred privada 1.<o:p></o:p></p>
+
+<p>Ingrese un bloque de CIDR para
+cada subred que se ajuste a su bloque de CIDR de VPC (por ejemplo, 10.0.3.0/24)
+<img id="instancia" 
+src="img/image012.jpg" v:shapes="_x0000_i1030">
+<img id="instancia" 
+src="img/image014.jpg" v:shapes="_x0000_i1031">
+<img id="instancia" 
+src="img/image016.jpg" v:shapes="_x0000_i1032">
+<img id="instancia" 
+src="img/image018.jpg" v:shapes="_x0000_i1033">
+<img id="instancia" 
+src="img/image020.jpg" v:shapes="_x0000_i1034">
+<img id="instancia" 
+src="img/image022.jpg" v:shapes="_x0000_i1035"></p>
+
+<p>Crear Internet Gateway<o:p></o:p></p>
+
+<p>El Internet Gateway se usa para
+dar acceso a Internet a las instancias dentro de una VPC<o:p></o:p></p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p>Para configurar IGW hagamos los
+siguientes pasos:<o:p></o:p></p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p>Seleccione Puertas de enlace de
+Internet en el mena de la izquierda. 2. Haga clic en Crear puerta de enlace de
+Internet e ingrese los siguientes detalles: 2.1 Etiqueta de nombre: introduzca
+un nombre para la puerta de enlace de Internet (por ejemplo, <span
+>my</span>-internet-<span >gateway</span>). 3. Haga
+clic en Crear puerta de enlace de Internet. 4. Seleccione Acciones -&gt;
+Adjuntar a VPC. 5. Seleccione la VPC que crea anteriormente y haga clic en
+Adjuntar puerta de enlace de Internet.
+<img id="instancia" 
+src="img/image024.jpg" v:shapes="_x0000_i1036">
+<img id="instancia" 
+src="img/image026.jpg" v:shapes="_x0000_i1037"></p>
+
+<p>Crear NAT Gateway<o:p></o:p></p>
+
+<p>NAT sirve para dar acceso a
+Internet saliente a los recursos de Instancias en subredes privadas.<o:p></o:p></p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p>Para crear un NAT sigamos los
+siguientes pasos:<o:p></o:p></p>
+
+<p>1. Seleccione Puertas de enlace
+NAT en el mena de la izquierda.<o:p></o:p></p>
+
+<p>2. Haga clic en Crear puerta de
+enlace NAT e ingrese los siguientes detalles:<o:p></o:p></p>
+
+<p>3. Nombre: ingrese un nombre para
+la puerta de enlace NAT (por ejemplo, <span >my-nat-gateway</span>).<o:p></o:p></p>
+
+<p>4. Subred: seleccione la subred
+con el nombre public-subnet-1.<o:p></o:p></p>
+
+<p>5. ID de asignacian de IP
+elastica: haga clic en Asignar IP elastica para crear una nueva IP elastica
+para la puerta de enlace NAT.<o:p></o:p></p>
+
+<p>6. Haga clic en Crear puerta de
+enlace NAT.
+<img id="instancia" 
+src="img/image028.jpg" v:shapes="_x0000_i1038">
+<img id="instancia" 
+src="img/image030.jpg" v:shapes="_x0000_i1039">
+<img id="instancia" 
+src="img/image032.jpg" v:shapes="_x0000_i1040"></p>
+
+<p>Configurar Tabla de rutas<o:p></o:p></p>
+
+<p>Se utilizan para administrar el <span
+><span >trafico</span></span> de red<o:p></o:p></p>
+
+<p><o:p>&nbsp;</o:p></p>
+
+<p>Configurar una tabla de
+enrutamiento:<o:p></o:p></p>
+
+<p>1. Seleccione Tablas de ruta en
+el mena de la izquierda.<o:p></o:p></p>
+
+<p>2. Seleccione la tabla de
+enrutamiento principal para la VPC que crea anteriormente.<o:p></o:p></p>
+
+<p>3. Pase el mouse sobre la columna
+Nombre de la tabla de ruta seleccionada, luego haga clic en el icono de edician
+e ingrese el nombre tabla de ruta principal.<o:p></o:p></p>
+
+<p>4. Haga clic en la pestaaa Rutas
+a continuacian y haga clic en Editar rutas.<o:p></o:p></p>
+
+<p>5. Haga clic en Agregar ruta e
+ingrese los siguientes detalles:<o:p></o:p></p>
+
+<p>5.1 Destino: ingrese 0.0.0.0/0
+para que coincida con todo el trafico no local.<o:p></o:p></p>
+
+<p>5.2 Destino: seleccione Puerta de
+enlace NAT y luego seleccione la puerta de enlace NAT que crea anteriormente.</p>
+
+<p>8. Haz clic en Guardar rutas.</p>
+<p><img id="instancia" 
+src="img/image034.jpg" v:shapes="_x0000_i1041"></p>
+
+<p>Configurar Tabla de enrutamiento
+para subredes <span >publicas</span><o:p></o:p></p>
+
+<p>Se debe de crear una nueva tabla
+de enrutamiento y se debe de seleccionar la VPC creada anteriormente, Luego se
+debe de seleccionar la <span >opcion</span> de Internet <span
+>GateWay</span> y seleccionar la creada. <span >Despues</span>
+de esto, podemos asociar las sub redes creadas a la nueva ruta.
+<img id="instancia" 
+src="img/image036.jpg" v:shapes="_x0000_i1042">
+<img id="instancia" 
+src="img/image038.jpg" v:shapes="_x0000_i1043">
+<img id="instancia" 
+src="img/image040.jpg" v:shapes="_x0000_i1044"></p>
+
+<p>Crear <span >AutoScaling</span>
+<span >group</span><o:p></o:p></p>
+
+<p>Para crear un Auto <span
+>Scaling</span> <span >group</span> sigamos los
+siguientes pasos:<o:p></o:p></p>
+
+<p>1. Seleccione Auto <span
+>Scaling</span> <span >Group</span> abajo en el mena de
+la izquierda.<o:p></o:p></p>
+
+<p>2. Haga clic en <span
+>create</span> Auto <span >Scaling</span><o:p></o:p></p>
+
+<p>3. Usamos una <span >etiqued</span>
+<span >Name</span> y le damos su respectivo nombre y luego una <span
+>descripcion</span>.<o:p></o:p></p>
+
+<p>4. Seleccionamos en AMI la <span
+>opcion</span> Linux 2.<o:p></o:p></p>
+
+<p>5. En el tipo de instancia: <span
+>T2.Micro .</span><o:p></o:p></p>
+
+<p>6. Por el tipo de ejemplo no
+seleccionamos un grupo de seguridad.<o:p></o:p></p>
+
+<p>7. En <span >Resource</span>
+<span >tag</span> la <span >etiqueda</span> <span
+>Name</span>, un valor y agregamos la <span >opcion</span>
+<span >volumes</span><o:p></o:p></p>
+
+<p>8. En detalles avanzados
+seleccionamos: List_S3<o:p></o:p></p>
+
+<p>9. En <span >user</span>
+data pegamos el script que deseamos corra al crearse las <span >instancias(</span>lo
+pegare abajo):<o:p></o:p></p>
+
+<p>10. Volemos a la pantalla
+anterior y refrescamos la <span >opcion</span> de <span
+>template</span>, y seleccionamos la creada<o:p></o:p></p>
+
+<p>11. Seleccionamos las zonas de
+disponibilidad<o:p></o:p></p>
+
+<p>12. No elegimos load <span
+><span >balancer</span></span><span >(</span><span
+>despues</span> lo haremos)<o:p></o:p></p>
+
+<p>12. Seleccionamos la <span
+>configuracion</span> en cantidad de <span >maquinas</span>
+que deseamos utilizar y luego aaadimos una etiqueta y damos clic en crear.<o:p></o:p></p>
+
+<p>#<span >!</span>/<span
+>bin</span>/<span >bash</span><o:p></o:p></p>
+
+<p><span >sudo</span> <span
+>yum</span> <span >update</span> -y<o:p></o:p></p>
+
+<p><span >sudo</span> <span
+>yum</span> <span >install</span> <span >git</span>
+-y<o:p></o:p></p>
+
+<p><span ><span
+>curl</span></span> -o-
+https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | <span
+>bash</span><o:p></o:p></p>
+
+<p>#https://stackoverflow.com/<span
+>questions</span>/54415841/<o:p></o:p></p>
+
+<p><span>nodejs-not-installed-successfully-in-aws-ec2-inside-user-data</span></span><span
+lang=EN-US ><o:p></o:p></span></p>
+
+<p><span>export</span></span><span
+lang=EN-US > NVM_DIR=&quot;$HOME/.<span
+>nvm</span>&quot;<o:p></o:p></span></p>
+
+<p><span>[ -</span></span><span lang=EN-US
+>s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; \. </span>&quot;$NVM_DIR/nvm.sh&quot;<o:p></o:p></p>
+
+<p><span ><span
+>nvm</span></span> <span >install</span> 7<o:p></o:p></p>
+
+<p><span ><span
+>nvm</span></span> <span >install</span> <span
+>node</span> -y<o:p></o:p></p>
+
+<p><span>node</span></span><span lang=EN-US
+> -e &quot;console.log('Running Node.js ' + <span
+>process.version</span>)&quot;<o:p></o:p></span></p>
+
+<p>#<span >mkdir</span>
+/<span >tmp</span>/proyecto #Comando para crear carpetas<o:p></o:p></p>
+
+<p><span >cd</span><o:p></o:p></p>
+
+<p><span ><span
+><span lang=EN-US >git</span></span></span><span
+lang=EN-US > clone
+https://github.com/abkunal/Chat-App-using-Socket.io.git<o:p></o:p></span></p>
+
+<p><span>cd</span></span><span lang=EN-US
+> /Chat-App-using-Socket.io<o:p></o:p></span></p>
+
+<p><span ><span
+>pwd</span></span><o:p></o:p></p>
+
+<p><span ><span
+>npm</span></span> <span >install</span><o:p></o:p></p>
+
+<p><span ><span
+>npm</span></span> <span >install</span> -g pm2<o:p></o:p></p>
+
+<p>pm2 <span >start</span>
+app.js<o:p></o:p></p>
+
+<p><span >sudo</span> <span
+>amazon</span>-<span >linux</span>-extras <span
+>list</span> | grep <span >nginx</span><o:p></o:p></p>
+
+<p><span >sudo</span> <span
+>amazon</span>-<span >linux</span>-extras <span
+>enable</span> nginx1<o:p></o:p></p>
+
+<p><span >sudo</span> <span
+>yum</span> <span >clean</span> <span >metadata</span><o:p></o:p></p>
+
+<p><span >sudo</span> <span
+>yum</span> -y <span >install</span> <span
+>nginx</span><o:p></o:p></p>
+
+<p><span ><span
+>nginx</span></span> -v<o:p></o:p></p>
+
+<p><span >cd</span> /<span
+>etc</span>/<span >nginx</span><o:p></o:p></p>
+
+<p><span ><span
+><span lang=EN-US >sudo</span></span></span><span
+lang=EN-US > <span >aws</span> s3 <span
+>cp</span> s3://nginx-ceutec-infra/nginx.conf <span >nginx.conf</span><o:p></o:p></span></p>
+
+<p><span >sudo</span> <span
+>service</span> <span >nginx</span> <span >restart</span></p>
+<img id="instancia" 
+src="img/image042.jpg" v:shapes="_x0000_i1045">
+ <v:imagedata src="img/image043.jpg" o:title="22"/>
+<img id="instancia" 
+src="img/image044.jpg" v:shapes="_x0000_i1046">
+ <v:imagedata src="img/image045.jpg" o:title="23"/>
+<img id="instancia" 
+src="img/image046.jpg" v:shapes="_x0000_i1047">
+ <v:imagedata src="img/image047.jpg" o:title="24"/>
+<img id="instancia" 
+src="img/image048.jpg" v:shapes="_x0000_i1048">
+ <v:imagedata src="img/image049.jpg" o:title="25"/>
+<img id="instancia" 
+src="img/image050.jpg" v:shapes="_x0000_i1049">
+ <v:imagedata src="img/image051.jpg" o:title="26"/>
+<img id="instancia" 
+src="img/image052.jpg" v:shapes="_x0000_i1050">
+ <v:imagedata src="img/image053.jpg" o:title="27"/>
+<img id="instancia" 
+src="img/image054.jpg" v:shapes="_x0000_i1051">
+ <v:imagedata src="img/image055.jpg" o:title="28"/>
+<img id="instancia" 
+src="img/image056.jpg" v:shapes="_x0000_i1052">
+ <v:imagedata src="img/image057.jpg" o:title="29"/>
+<img id="instancia" 
+src="img/image058.jpg" v:shapes="_x0000_i1053">
+<img id="instancia" 
+src="img/image060.jpg" v:shapes="_x0000_i1054">
+<img id="instancia" 
+src="img/image062.jpg" v:shapes="_x0000_i1055">
+<img id="instancia" 
+src="img/image064.jpg" v:shapes="_x0000_i1056">
+<img id="instancia" 
+src="img/image066.jpg" v:shapes="_x0000_i1057">
+<img id="instancia" 
+src="img/image068.jpg" v:shapes="_x0000_i1058"></p>
+
+<p>Crear Load <span >Balancer</span></p>
+
+<p>Elegir la opcian craate load <span
+>balancer</span></p>
+
+<p>Elegir la zona de disponibilidad</p>
+<img id="instancia" 
+src="img/image070.jpg" v:shapes="_x0000_i1059">
+<img id="instancia" 
+src="img/image072.jpg" v:shapes="_x0000_i1060">
+<img id="instancia" 
+src="img/image074.jpg" v:shapes="_x0000_i1061">
+<img id="instancia" 
+src="img/image076.jpg" v:shapes="_x0000_i1062">
+<img id="instancia" 
+src="img/image078.jpg" v:shapes="_x0000_i1063">
+<img id="instancia" 
+src="img/image080.jpg" v:shapes="_x0000_i1064"></p>
+
+<p>Lanzamos la instancia y probamos
+funcionalidad.</p>
+<p><img id="instancia" 
+src="img/image082.jpg" v:shapes="Imagen_x0020_1"></p>
+
+</article>
+<footer>
+    <span class="text-light">
+<center>
+<small>
+Desarrollado por: Walter Rodriguez (T31751087) email:
+<a href="mailto:www.walferm@gmail.com">www.walferm@gmail.com</a>
+</small>
+</center>
+</span>
+</footer>
+</body>
+</html>
